@@ -3,7 +3,7 @@ data "aws_ami" "app_ami" {
 
   filter {
     name   = "name"
-    values = ["bitnami-tomcat-*-x86_64-hvm-ebs-nami"]
+    values = ["aws-elasticbeanstalk-amzn-*.64bit-eb_tomcat11corretto17_amazon_linux_2023-hvm-*.770Z"]
   }
 
   filter {
@@ -11,7 +11,7 @@ data "aws_ami" "app_ami" {
     values = ["hvm"]
   }
 
-  owners = ["979382823631"] # Bitnami
+  owners = ["732788773938"] # aws
 }
 
 resource "aws_instance" "web" {
